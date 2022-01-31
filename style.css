@@ -1,0 +1,118 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Acme', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(#020412, #060c37, #0a145c);
+  color: #d00000;
+}
+section {
+  height: 100vh;
+}
+header {
+  /* text-align: center; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 0;
+}
+main h1 {
+  font-size: 50px;
+  margin: 0;
+}
+main p {
+  font-size: 20px;
+  margin: 0;
+}
+.face {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: #6a040f; /*d4ffc2*/
+}
+nav {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 200px 200px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+nav a {
+  text-decoration: none;
+  color: #ffba08;
+  font-size: 28px;
+  transition-duration: 500ms;
+}
+.logo {
+  color: #ffba08;
+}
+/* ==== */
+.about-me {
+  width: 100%;
+  color: #ef233c;
+  transition-duration: 500ms;
+}
+.who-am-I {
+  width: 700px;
+  margin: 0 auto 0 auto;
+}
+.who-am-I h1 {
+  font-size: 32px;
+  text-align: center;
+}
+.who-am-I p {
+  font-size: 20px;
+  width: 700px;
+  text-align: center;
+}
+.my-experience {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+}
+.my-experience h1 {
+  font-size: 50px;
+}
+.my-experience h2 {
+  font-size: 32px;
+  text-align: center;
+}
+/*  */
+.my-works {
+  width: 100%;
+}
+.grid {
+  height: 100%;
+  width: 100%;
+  gap: 50px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.grid div {
+  border: 1px solid black;
+  display: grid;
+  place-items: center;
+}
