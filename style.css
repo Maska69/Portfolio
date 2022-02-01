@@ -17,15 +17,16 @@ body {
   color: #d00000;
 }
 section {
-  height: 100vh;
+  height: auto;
 }
 header {
   /* text-align: center; */
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 main {
   width: 100%;
@@ -61,7 +62,6 @@ nav a {
   text-decoration: none;
   color: #ffba08;
   font-size: 28px;
-  transition-duration: 500ms;
 }
 .logo {
   color: #ffba08;
@@ -70,7 +70,7 @@ nav a {
 .about-me {
   width: 100%;
   color: #ef233c;
-  transition-duration: 500ms;
+  margin-bottom: 0px;
 }
 .who-am-I {
   width: 700px;
@@ -86,17 +86,23 @@ nav a {
   text-align: center;
 }
 .my-experience {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
-  gap: 100px;
   width: 100%;
 }
 .my-experience h1 {
   font-size: 50px;
+  text-align: center;
+  color: #ffba08;
 }
 .my-experience h2 {
   font-size: 32px;
   text-align: center;
+}
+.programming {
+  grid-column: 1/5;
 }
 /*  */
 .my-works {
@@ -125,4 +131,79 @@ nav a {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+/* responsive 😫😖 */
+@media only screen and (max-width: 800px) {
+  header {
+    height: auto;
+  }
+  main h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  main p {
+    font-size: 16px;
+    text-align: center;
+    width: 300px;
+  }
+  .face {
+    width: 200px;
+    height: 200px;
+  }
+  nav {
+    grid-template-columns: auto 100px 100px;
+  }
+  nav a {
+    font-size: 20px;
+  }
+  /*  */
+  .about-me {
+    height: auto;
+  }
+  .who-am-I {
+    width: 300px;
+    margin: 0 auto 0 auto;
+  }
+  .who-am-I h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .who-am-I p {
+    font-size: 16px;
+    width: 300px;
+    text-align: center;
+  }
+  .my-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .my-experience h1 {
+    font-size: 46px;
+    color: #ffba08;
+  }
+  .my-experience h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+  /*  */
+  .my-works {
+    height: auto;
+    margin-top: 150px;
+  }
+  .grid {
+    height: 100%;
+    width: 100%;
+    gap: 50px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .grid div {
+    font-size: 12px;
+  }
 }
