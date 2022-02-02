@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(#020412, #060c37, #0a145c);
+  background: linear-gradient(#020412, #060c37);
   color: #d00000;
 }
 section {
@@ -39,10 +39,14 @@ main {
 main h1 {
   font-size: 50px;
   margin: 0;
+  text-align: center;
+  color: white;
 }
+
 main p {
   font-size: 20px;
   margin: 0;
+  color: white;
 }
 .face {
   border-radius: 50%;
@@ -84,6 +88,7 @@ nav a {
   font-size: 20px;
   width: 700px;
   text-align: center;
+  color: white;
 }
 .my-experience {
   display: grid;
@@ -100,6 +105,7 @@ nav a {
 .my-experience h2 {
   font-size: 32px;
   text-align: center;
+  color: white;
 }
 .programming {
   grid-column: 1/5;
@@ -117,21 +123,29 @@ nav a {
   width: 100%;
   gap: 50px;
   padding: 50px;
+  padding-bottom: 150px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  cursor: pointer;
 }
 .grid div {
-  border: 1px solid black;
+  border: 1px solid white;
   display: grid;
   place-items: center;
+  height: 300px;
 }
 .My-works-header {
   font-size: 50px;
   margin: 0;
   padding: 0;
   text-align: center;
+  color: white;
 }
+.grid div:hover {
+  transform: translateY(-10px);
+}
+
 /* responsive 😫😖 */
 @media only screen and (max-width: 800px) {
   header {
@@ -183,7 +197,6 @@ nav a {
   }
   .my-experience h1 {
     font-size: 46px;
-    color: #ffba08;
   }
   .my-experience h2 {
     font-size: 28px;
@@ -205,5 +218,12 @@ nav a {
   }
   .grid div {
     font-size: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    padding-bottom: 200px;
   }
 }
